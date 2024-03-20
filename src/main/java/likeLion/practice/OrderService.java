@@ -6,5 +6,6 @@ public interface OrderService {
     void join(Member member);
     Member findMember(Long memberId);
 
+    int discount(int price, Member member);
 
 }
