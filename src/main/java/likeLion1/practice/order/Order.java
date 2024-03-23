@@ -1,11 +1,9 @@
 package likeLion1.practice.order;
 
 public class Order {
-
     Long id;
     String productName;
     int price;
-
     int discountPrice;
 
     public Order(Long id, String productName, int price, int discountPrice) {

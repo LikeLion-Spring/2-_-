@@ -3,38 +3,33 @@ package likeLion1.practice.order;
 import likeLion1.practice.member.Grade;
 import likeLion1.practice.member.Member;
 import likeLion1.practice.member.MemberService;
+import likeLion1.practice.order.Order;
+import likeLion1.practice.order.OrderService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-
 @SpringBootTest
 class OrderServiceImplTest {
+    @Autowired
+    public OrderService orderService;
 
     @Autowired
-    private OrderService os;
-
-    @Autowired
-    private MemberService ms;
+    public MemberService memberService;
 
     @Test
     void createOrder() {
-        //회원 생성
-        Member m1 = new Member(1L, "강찬욱", Grade.VIP);
-        Member m2 = new Member(2L, "곽민재", Grade.BASIC);
-        //회원 가입
-        ms.join(m1);
-        ms.join(m2);
+        Member m1 = new Member(3L, "김정은", Grade.VIP);
+        Member m2 = new Member(4L, "홍길동", Grade.BASIC);
 
-        Order vipOrder = os.createOrder(m1.getId(), "아이폰", 3000);
-        Order basicOrder = os.createOrder(m2.getId(), "아이폰", 3000);
+        memberService.join(m1);
+        memberService.join(m2);
 
-        System.out.println("-------------------------");
-        System.out.println(vipOrder.getDiscountPrice());
-        System.out.println(basicOrder.getDiscountPrice());
-        System.out.println("-------------------------");
+        Order order1 = orderService.createOrder(m1.getId(), "빵" , 5000);
+        Order order2 = orderService.createOrder(m2.getId(), "케이크" , 6000);
 
+        System.out.println("order1 \n 할인전 가격 : " + order1.getPrice() +"\n 할인된 가격 : " + order1.getDiscountPrice());
+        System.out.println("order2 \n 할인전 가격 : " + order2.getPrice() +"\n 할인된 가격 : " + order2.getDiscountPrice());
     }
+
 }
