@@ -27,6 +27,7 @@ class OrderServiceImplTest {
         //회원 가입
         ms.join(m1);
         ms.join(m2);
+        System.out.println();
 
         Order vipOrder = os.createOrder(m1.getId(), "아이폰", 3000);
         Order basicOrder = os.createOrder(m2.getId(), "아이폰", 3000);
