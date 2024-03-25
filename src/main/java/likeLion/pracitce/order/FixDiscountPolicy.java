@@ -2,7 +2,9 @@ package likeLion.pracitce.order;
 
 import likeLion.pracitce.member.Grade;
 import likeLion.pracitce.member.Member;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FixDiscountPolicy implements DiscountPolicy{
     @Override
     public int discount(Member m, int price) {
