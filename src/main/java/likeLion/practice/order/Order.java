@@ -1,4 +1,4 @@
-package likeLion.pracitce.order;
+package likeLion.practice.order;
 
 public class Order {
     private long id;

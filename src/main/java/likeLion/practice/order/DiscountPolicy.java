@@ -1,6 +1,6 @@
-package likeLion.pracitce.order;
+package likeLion.practice.order;
 
-import likeLion.pracitce.member.Member;
+import likeLion.practice.member.Member;
 
 public interface DiscountPolicy {
     int discount (Member m, int price);

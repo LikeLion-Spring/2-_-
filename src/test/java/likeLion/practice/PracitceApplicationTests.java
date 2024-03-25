@@ -1,4 +1,4 @@
-package likeLion.pracitce;
+package likeLion.practice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

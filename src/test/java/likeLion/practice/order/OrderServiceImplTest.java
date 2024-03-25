@@ -1,14 +1,11 @@
-package likeLion.pracitce.order;
+package likeLion.practice.order;
 
-import likeLion.pracitce.member.Grade;
-import likeLion.pracitce.member.Member;
-import likeLion.pracitce.member.MemberService;
+import likeLion.practice.member.Grade;
+import likeLion.practice.member.Member;
+import likeLion.practice.member.MemberService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.ApplicationContext;
-
-import java.util.Map;
 
 @SpringBootTest
 public class OrderServiceImplTest {

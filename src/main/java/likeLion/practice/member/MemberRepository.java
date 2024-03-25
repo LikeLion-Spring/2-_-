@@ -1,4 +1,4 @@
-package likeLion.pracitce.member;
+package likeLion.practice.member;
 
 public interface MemberRepository {
 

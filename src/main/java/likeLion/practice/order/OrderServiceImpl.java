@@ -1,6 +1,6 @@
-package likeLion.pracitce.order;
+package likeLion.practice.order;
 
-import likeLion.pracitce.member.MemberRepository;
+import likeLion.practice.member.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

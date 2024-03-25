@@ -1,7 +1,7 @@
-package likeLion.pracitce.order;
+package likeLion.practice.order;
 
-import likeLion.pracitce.member.Grade;
-import likeLion.pracitce.member.Member;
+import likeLion.practice.member.Grade;
+import likeLion.practice.member.Member;
 import org.springframework.stereotype.Component;
 
 @Component

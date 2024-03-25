@@ -1,4 +1,4 @@
-package likeLion.pracitce;
+package likeLion.practice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

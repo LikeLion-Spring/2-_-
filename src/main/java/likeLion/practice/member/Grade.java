@@ -1,4 +1,4 @@
-package likeLion.pracitce.member;
+package likeLion.practice.member;
 
 //emum이 뭐고 무슨 장점이 있는가
 public enum Grade {
