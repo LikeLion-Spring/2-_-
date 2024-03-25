@@ -1,4 +1,4 @@
-package likeLion1.practice.member.member.member.member;
+package likeLion.practice.member;
 
 import org.springframework.stereotype.Repository;
 
