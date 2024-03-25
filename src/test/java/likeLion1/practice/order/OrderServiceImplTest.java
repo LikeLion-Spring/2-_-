@@ -11,8 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 @SpringBootTest
-class OrderServiceImplTest {
-
+public class OrderServiceImplTest {
     @Autowired
     private OrderService os;
 
@@ -20,7 +19,7 @@ class OrderServiceImplTest {
     private MemberService ms;
 
     @Test
-    void createOrder() {
+    void makeOrderTest() {
         //회원 생성
         Member m1 = new Member(1L, "강찬욱", Grade.VIP);
         Member m2 = new Member(2L, "곽민재", Grade.BASIC);
@@ -28,12 +27,12 @@ class OrderServiceImplTest {
         ms.join(m1);
         ms.join(m2);
 
-        Order vipOrder = os.createOrder(m1.getId(), "아이폰", 3000);
-        Order basicOrder = os.createOrder(m2.getId(), "아이폰", 3000);
+        Order vipOrder = os.makeOrder(m1.getId(), "아이폰", 3000);
+        Order basicOrder = os.makeOrder(m2.getId(), "아이폰", 3000);
 
         System.out.println("-------------------------");
-        System.out.println(vipOrder.getDiscountPrice());
-        System.out.println(basicOrder.getDiscountPrice());
+        System.out.println(vipOrder);
+        System.out.println(basicOrder);
         System.out.println("-------------------------");
 
     }

@@ -1,33 +1,25 @@
 package likeLion1.practice.order;
 
+import likeLion1.practice.member.Member;
+import likeLion1.practice.member.MemberRepository;
+
 public class Order {
+    private Long memberId;
+    private String itemName;
+    private int itemPrice;
 
-    Long id;
-    String productName;
-    int price;
-
-    int discountPrice;
-
-    public Order(Long id, String productName, int price, int discountPrice) {
-        this.id = id;
-        this.productName = productName;
-        this.price = price;
-        this.discountPrice = discountPrice;
+    public Order(Long memberId, String itemName, int itemPrice) {
+        this.memberId = memberId;
+        this.itemName = itemName;
+        this.itemPrice = itemPrice;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public int getDiscountPrice() {
-        return discountPrice;
+    @Override
+    public String toString() {
+        return "Order{" +
+                "memberId=" + memberId +
+                ", itemName='" + itemName + '\'' +
+                ", itemPrice=" + itemPrice +
+                '}';
     }
 }

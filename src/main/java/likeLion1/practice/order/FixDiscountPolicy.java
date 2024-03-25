@@ -6,16 +6,15 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-public class FixDiscountPolicy implements DiscountPolicy{
-
+public class FixDiscountPolicy implements  DiscountPolicy{
+    int discountPrice = 1000;
     @Override
-    public int discount(Member m, int price) {
-        Grade g = m.getGrade();
-
-        if(g == Grade.VIP)
-            return price - 1000;
-        else
+    public int discount(Member member, int price) {
+        if(member.getGrade() == Grade.VIP){
+            return price - discountPrice;
+        }
+        else {
             return price;
+        }
     }
-
 }

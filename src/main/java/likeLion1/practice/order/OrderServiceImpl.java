@@ -8,21 +8,20 @@ import org.springframework.stereotype.Service;
 @Service
 public class OrderServiceImpl implements OrderService{
 
-    private MemberRepository repos;
-    private DiscountPolicy dp;
+
+    private MemberRepository memberRepository;
+    private DiscountPolicy discountPolicy;
 
     @Autowired
-    public OrderServiceImpl(MemberRepository repos, DiscountPolicy dp) {
-        this.repos = repos;
-        this.dp = dp;
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
     }
 
     @Override
-    public Order createOrder(Long id, String productName, int price) {
-
-        Member m = repos.findById(id);
-        int discountPrice = dp.discount(m, price);
-
-        return new Order(id, productName, price, discountPrice);
+    public Order makeOrder(Long memberId, String itemName, int itemPrice) {
+        Member member = memberRepository.findById(memberId);
+        int calculatePrice = discountPolicy.discount(member,itemPrice);
+        return new Order(memberId, itemName,calculatePrice);
     }
 }
