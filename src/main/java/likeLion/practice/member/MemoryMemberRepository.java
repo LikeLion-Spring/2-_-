@@ -1,11 +1,8 @@
-package likeLion1.practice.member;
-
-import org.springframework.stereotype.Repository;
+package likeLion.practice.member;
 
 import java.util.HashMap;
 import java.util.Map;
 
-@Repository
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long,Member> store = new HashMap<>();

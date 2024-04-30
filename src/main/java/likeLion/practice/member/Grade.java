@@ -1,6 +1,7 @@
-package likeLion1.practice.member;
+package likeLion.practice.member;
 
 public enum Grade {
     BASIC,
     VIP
+
 }

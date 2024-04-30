@@ -1,4 +1,4 @@
-package likeLion1.practice.order;
+package likeLion.practice.order;
 
 public class Order {
 
