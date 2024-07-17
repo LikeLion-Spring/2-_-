@@ -21,6 +21,7 @@ class OrderServiceImplTest {
     void createOrder() {
         Member m1 = new Member(3L, "김정은", Grade.VIP);
         Member m2 = new Member(4L, "홍길동", Grade.BASIC);
+        //sdf
 
         memberService.join(m1);
         memberService.join(m2);
